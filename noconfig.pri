@@ -23,12 +23,10 @@ DEFINES += HAVE_PIPER HAVE_PLUGIN_CHECKER_HELPER
 DEFINES += \
         HAVE_BZ2 \
 	HAVE_FFTW3 \
-	HAVE_FFTW3F \
 	HAVE_SNDFILE \
 	HAVE_SAMPLERATE \
 	HAVE_RUBBERBAND \
 	HAVE_LIBLO \
-	HAVE_MAD \
 	HAVE_ID3TAG \
         HAVE_OPUS \
 	HAVE_PORTAUDIO
@@ -41,7 +39,6 @@ LIBS += \
         -lbz2 \
         -lrubberband \
 	-lfftw3 \
-	-lfftw3f \
 	-lsndfile \
 	-lFLAC \
 	-logg \
@@ -51,7 +48,6 @@ LIBS += \
         -lopusfile \
         -lopus \
 	-logg \
-	-lmad \
 	-lid3tag \
 	-lportaudio \
 	-lsamplerate \
@@ -124,10 +120,12 @@ macx* {
 
     # All Mac builds are 64-bit these days.
 
-    INCLUDEPATH += $$PWD/sv-dependency-builds/osx/include $$PWD/sv-dependency-builds/osx/include/opus
-    LIBS += -L$$PWD/sv-dependency-builds/osx/lib -L$$PWD
+    QMAKE_APPLE_DEVICE_ARCHS = arm64
 
-    INCLUDEPATH += /usr/local/opt/boost/include $$PWD/../boost_1_74_0
+    INCLUDEPATH += $$PWD/sv-dependency-builds/osx/include-arm64 $$PWD/sv-dependency-builds/osx/include $$PWD/sv-dependency-builds/osx/include/opus
+    LIBS += -L$$PWD/sv-dependency-builds/osx/lib-arm64 -L$$PWD
+
+    INCLUDEPATH += /opt/homebrew/opt/boost/include $$PWD/../boost_1_74_0
 
     QMAKE_CXXFLAGS_RELEASE += -O3 -ffast-math -flto
     QMAKE_LFLAGS_RELEASE += -O3 -flto
