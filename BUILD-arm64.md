@@ -11,8 +11,8 @@ A native arm64 build of Sonic Lineup 1.1 from upstream source, packaged as a sel
 ## Recipe
 
 ```sh
-git clone -b arm64 https://github.com/yrammos/sonic-lineup.git
-cd sonic-lineup
+git clone https://github.com/yrammos/sonic-lineup-arm64.git
+cd sonic-lineup-arm64
 brew bundle
 
 export PATH="/opt/homebrew/opt/qt@5/bin:$PATH"
