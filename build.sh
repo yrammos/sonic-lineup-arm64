@@ -4,7 +4,7 @@
 
 export PATH="/opt/homebrew/opt/qt@5/bin:$PATH"
 log=build.log
-pat='error:|^ld: |Undefined symbols|\*\*\* '
+pat='error:|^ld: |Undefined symbols|^make.*\*\*\* '
 
 if make -j"$(sysctl -n hw.ncpu)" "$@" >"$log" 2>&1; then
     echo "BUILD OK ($(grep -c 'warning:' "$log") warnings, see $log)"
