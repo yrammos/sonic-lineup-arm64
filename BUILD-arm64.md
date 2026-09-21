@@ -48,6 +48,7 @@ Delete the bundle and run `./build.sh` again; the bundle is regenerated and re-s
 | `159f823` | `noconfig.pri` | FFTW restricted to double precision, the only variant available for arm64. |
 | `fbba0f1` | `build.sh` | Error detection no longer mistakes test output for a failure. |
 | `cb2eda3` | `deploy/osx/deploy.sh` | Qt and its Homebrew dependencies bundled with `macdeployqt`; bundle ad hoc signed. |
+| `706e8d8` | `deploy/osx/deploy.sh` | Virtual keyboard plugin and the QML frameworks it alone requires removed from the bundle. |
 
 The svcore fix lives in a separately fetched library and is not part of this repository’s history; hence the `git apply` step in the recipe, to be repeated whenever svcore is fetched afresh.
 
