@@ -1,0 +1,5 @@
+brew "qt@5"
+brew "mercurial"
+brew "polyml"
+brew "boost"
+brew "pkgconf"
