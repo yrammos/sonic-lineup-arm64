@@ -44,7 +44,12 @@ jobs:
           app="Sonic Lineup.app"
           "$app/Contents/MacOS/Sonic Lineup" -v
           codesign -v --deep --strict "$app"
-          if find "$app" -type f -exec otool -L {} \; 2>/dev/null | grep -E '/opt/homebrew|/usr/local'; then
+          # Load commands only: a Qt plugin's own install name may keep
+          # its Homebrew path harmlessly
+          if find "$app" -type f -exec otool -l {} \; 2>/dev/null |
+                  awk '/cmd LC_(LOAD|LOAD_WEAK|REEXPORT)_DYLIB/ { f = 1 }
+                       f && / name / { print $2; f = 0 }' |
+                  grep -E '/opt/homebrew|/usr/local'; then
               echo "Bundle still references Homebrew paths" >&2
               exit 1
           fi
