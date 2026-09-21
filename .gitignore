@@ -69,3 +69,5 @@ qrc_*.cpp
 /pyin/
 /nnls-chroma/
 /azi/
+!/patches/
+!/patches/**
