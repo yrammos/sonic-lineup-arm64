@@ -40,20 +40,12 @@ for plugin in azi match-vamp-plugin nnls-chroma pyin qm-vamp-plugins tuning-diff
 done
 
 echo
-echo "Copying in frameworks and plugins from Qt installation directory."
+echo "Copying in Qt frameworks, plugins, and their dependencies."
 
-deploy/osx/copy-qt.sh "$app" || exit 2
-
-echo
-echo "Fixing up paths."
-
-deploy/osx/paths.sh "$app"
-
-echo
-echo "Copying in qt.conf to set local-only plugin paths."
-echo "Make sure all necessary Qt plugins are in $source/Contents/plugins/*"
-echo "You probably want platforms/, accessible/ and imageformats/ subdirectories."
-cp deploy/osx/qt.conf "$source"/Contents/Resources/qt.conf
+# macdeployqt also bundles Homebrew Qt's non-Qt dependencies, which
+# copy-qt.sh and paths.sh do not
+qtdir=$(grep "Command:" Makefile | head -1 | awk '{ print $3; }' | sed s,/bin/.*,,)
+"$qtdir/bin/macdeployqt" "$source" -always-overwrite
 
 echo
 echo "Copying in plugin load checker."
@@ -75,5 +67,9 @@ perl -p -e "s/VECT_VERSION/$bundleVersion/" deploy/osx/Info.plist \
     > "$source"/Contents/Info.plist
 
 echo "Done: check $source/Contents/Info.plist for sanity please"
+
+echo
+echo "Ad hoc signing bundle (install_name_tool invalidates signatures)."
+codesign --force --deep -s - "$source"
 
 echo "Done"
