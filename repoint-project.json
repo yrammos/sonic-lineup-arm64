@@ -11,25 +11,34 @@
     },
     "libraries": {
         "vamp-plugin-sdk": {
-            "vcs": "hg",
-            "service": "soundsoftware"
+            "vcs": "git",
+            "service": "github",
+            "owner": "c4dm"
         },
         "svcore": {
-            "vcs": "hg",
-	    "service": "soundsoftware"
+            "vcs": "git",
+	    "service": "github",
+            "owner": "sonic-visualiser",
+            "branch": "default"
         },
         "svgui": {
-            "vcs": "hg",
-	    "service": "soundsoftware"
+            "vcs": "git",
+	    "service": "github",
+            "owner": "sonic-visualiser",
+            "branch": "default"
         },
         "svapp": {
-            "vcs": "hg",
-	    "service": "soundsoftware"
+            "vcs": "git",
+	    "service": "github",
+            "owner": "sonic-visualiser",
+            "branch": "default"
         },
         "checker": {
-            "vcs": "hg",
-	    "service": "soundsoftware",
-	    "repository": "vamp-plugin-load-checker"
+            "vcs": "git",
+	    "service": "github",
+            "owner": "sonic-visualiser",
+	    "repository": "vamp-plugin-load-checker",
+            "branch": "default"
         },
         "piper": {
             "vcs": "git",
@@ -77,17 +86,22 @@
             "owner": "breakfastquay"
         },
         "sv-dependency-builds": {
-            "vcs": "hg",
-	    "service": "soundsoftware"
+            "vcs": "git",
+	    "service": "github",
+            "owner": "sonic-visualiser",
+            "branch": "default"
         },
         "icons/scalable": {
-            "vcs": "hg",
-	    "service": "soundsoftware",
-	    "repository": "sv-iconset"
+            "vcs": "git",
+	    "service": "github",
+            "owner": "sonic-visualiser",
+	    "repository": "sv-iconset",
+            "branch": "default"
         },
         "match": {
-            "vcs": "hg",
-	    "service": "soundsoftware",
+            "vcs": "git",
+	    "service": "github",
+            "owner": "c4dm",
             "repository": "match-vamp",
             "branch": "subsequence"
         },
@@ -98,16 +112,20 @@
             "repository": "constant-q-cpp"
         },
         "tuning-difference": {
-            "vcs": "hg",
-	    "service": "soundsoftware"
+            "vcs": "git",
+	    "service": "github",
+            "owner": "cannam"
         },
         "pyin": {
-            "vcs": "hg",
-	    "service": "soundsoftware"
+            "vcs": "git",
+	    "service": "github",
+            "owner": "c4dm",
+            "branch": "default"
         },
         "nnls-chroma": {
-            "vcs": "hg",
-	    "service": "soundsoftware"
+            "vcs": "git",
+	    "service": "github",
+            "owner": "c4dm"
         },
         "qm-vamp-plugins": {
             "vcs": "git",
@@ -120,8 +138,10 @@
             "owner": "c4dm"
         },
         "azi": {
-            "vcs": "hg",
-	    "service": "soundsoftware"
+            "vcs": "git",
+	    "service": "github",
+            "owner": "cannam",
+            "branch": "default"
         }
     }
 }

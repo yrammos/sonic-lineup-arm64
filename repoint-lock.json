@@ -1,19 +1,19 @@
 {
   "libraries": {
     "vamp-plugin-sdk": {
-      "pin": "0e32c328b02a"
+      "pin": "c3ef877327f1b081b95a1d05349c297f8c4454f0"
     },
     "svcore": {
-      "pin": "f803d3c33f76"
+      "pin": "b403f10819e9b51e3aa7562ffe40d753fccff6f3"
     },
     "svgui": {
-      "pin": "dc0e47f234a2"
+      "pin": "7637898d81827dd014f54e0d7da654e2e872381c"
     },
     "svapp": {
-      "pin": "1089d65c585d"
+      "pin": "87f09b7751401b82089c4c0fc158b2cbd1f750f5"
     },
     "checker": {
-      "pin": "e839338d3869"
+      "pin": "ed75cff475c72381aedad936c72b93b4f38157d3"
     },
     "piper": {
       "pin": "3a742c556ac1f2bf9823f30b937c71c690e1f6ae"
@@ -43,25 +43,25 @@
       "pin": "7686116dcdd5"
     },
     "sv-dependency-builds": {
-      "pin": "08ae793730bd"
+      "pin": "01bb14514cdbed5f7741ddad8d0a0e1021fbbcbc"
     },
     "icons/scalable": {
-      "pin": "fd0ace21dce3"
+      "pin": "17cdee898ac67f72bc86cbb60fecd33bdaccfbf9"
     },
     "match": {
-      "pin": "aac9ad4064ea"
+      "pin": "9e0c3be2be4f97e5d91e888a48f6e0ad77edd2f4"
     },
     "constant-q-cpp": {
       "pin": "7ac84048e3e43c433d88e12d221af15e50f41591"
     },
     "tuning-difference": {
-      "pin": "8fd1c994f937"
+      "pin": "5216a8858e8931c0d707192366488303bfb5a169"
     },
     "pyin": {
-      "pin": "a7d9c6142f8f"
+      "pin": "1d68cac9c5ecb1d81054d25d90158e5838dd78c2"
     },
     "nnls-chroma": {
-      "pin": "82d5d11b68d7"
+      "pin": "4c5f214a75cb354f8d8c933e161377c5b4d83713"
     },
     "qm-vamp-plugins": {
       "pin": "06933fecfa33aec41a07cc865098be7545ffcca3"
@@ -70,7 +70,7 @@
       "pin": "e34a3cc188332ed7c33cd9257ef164de5b587191"
     },
     "azi": {
-      "pin": "299df1b44eff"
+      "pin": "f4c2c3f682d1ed049671dbfd3ff9d5bb58e7406b"
     }
   }
 }
