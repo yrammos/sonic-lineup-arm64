@@ -133,6 +133,9 @@ macx* {
     QMAKE_LFLAGS_RELEASE += -isysroot $$QMAKE_MAC_SDK_PATH
 
     DEFINES += HAVE_COREAUDIO HAVE_VDSP
+
+    # No single-precision FFTW in lib-arm64
+    DEFINES += FFTW_DOUBLE_ONLY
     LIBS += \
         -framework CoreAudio \
 	-framework CoreMidi \
