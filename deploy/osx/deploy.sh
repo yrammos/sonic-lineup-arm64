@@ -47,6 +47,14 @@ echo "Copying in Qt frameworks, plugins, and their dependencies."
 qtdir=$(grep "Command:" Makefile | head -1 | awk '{ print $3; }' | sed s,/bin/.*,,)
 "$qtdir/bin/macdeployqt" "$source" -always-overwrite
 
+# The virtual keyboard input plugin is the only user of these
+rm -rf "$source"/Contents/PlugIns/platforminputcontexts \
+       "$source"/Contents/PlugIns/virtualkeyboard \
+       "$source"/Contents/Frameworks/QtQml.framework \
+       "$source"/Contents/Frameworks/QtQmlModels.framework \
+       "$source"/Contents/Frameworks/QtQuick.framework \
+       "$source"/Contents/Frameworks/QtVirtualKeyboard.framework
+
 echo
 echo "Copying in plugin load checker."
 cp checker/vamp-plugin-load-checker "$source"/Contents/MacOS/
