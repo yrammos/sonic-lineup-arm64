@@ -1,0 +1,13 @@
+diff --git a/base/RingBuffer.h b/base/RingBuffer.h
+index 49b3678..5fcb15a 100644
+--- a/base/RingBuffer.h
++++ b/base/RingBuffer.h
+@@ -210,7 +210,7 @@ RingBuffer<T, N>::resized(int newSize) const
+ 
+     while (r != w) {
+         T value = m_buffer[r];
+-        newBuffer->write(&value, 1);
++        newBuffer.write(&value, 1);
+         if (++r == m_size) r = 0;
+     }
+ 
