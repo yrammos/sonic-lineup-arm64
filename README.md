@@ -1,6 +1,6 @@
 # Sonic Lineup for Apple Silicon
 
-An unofficial native build for Apple Silicon of Sonic Lineup, the application for aligning and comparing recordings of one work developed at the Centre for Digital Music, Queen Mary University of London. The fork touches only the build and the bundle; the original notes follow unaltered.
+An unofficial native build of Sonic Lineup for Apple Silicon. The app was developed at the Centre for Digital Music, Queen Mary University of London. The present fork revises the build and the bundle only; the code is otherwise unaltered, and so are the README sections that follow.
 
 - **Download.** Each [release](https://github.com/yrammos/sonic-lineup-arm64/releases) carries the zipped application; unzip it and move `Sonic Lineup.app` to Applications. Its notes state the minimum macOS version.
 - **First launch.** Being ad hoc signed rather than notarized, the app is blocked by macOS at first launch. Allow it under System Settings › Privacy & Security › Open Anyway, or clear the quarantine attribute:
